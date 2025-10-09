@@ -1,0 +1,165 @@
+@charset "utf-8";
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --accent-color: #a17724d3;
+  --base-color: #fdb8b828;
+}
+
+body,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+img {
+  vertical-align: bottom;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 32px;
+  color: #333;
+}
+
+header {
+  /* border-top: 2px solid rgba(0, 21, 255, 0.644);
+  border-bottom: 2px solid rgba(0, 21, 255, 0.644); */
+
+  h2 {
+    font-weight: normal;
+    font-size: 32px;
+    color: var(--accent-color);
+  }
+
+  p {
+    color: #ec0a0a6e;
+  }
+}
+
+/* ホーム＝＝＝メニューページ*/
+
+section {
+  margin-top: 32px;
+
+  h3 {
+    font-size: 24px;
+    color: rgb(37, 44, 240);
+    border-bottom: 3px dotted rgb(37, 44, 240);
+  }
+}
+
+ul.list {
+  border: none;
+  margin-top: 16px;
+  list-style: none;
+  font-size: 20px;
+  padding-left: 16px;
+}
+
+
+
+
+/* 作り方ページ */
+
+main {
+
+  h3 {
+    font-size: 24px;
+    margin-top: 16px;
+    color: #333;
+  }
+
+  h3::before {
+    content: "";
+  }
+
+
+  h4 {
+    margin-top: 16px;
+    color: var(--accent-color);
+    font-size: 18px;
+    border-bottom: 2px solid var(--accent-color);
+    display: inline-block;
+  }
+
+  .ingredients table {
+    width: 100%;
+    /* border: 3px solid var(--accent-color); */
+    border-radius: 8px;
+    padding: 8px;
+    margin-top: 8px;
+    border-collapse: separate;
+    background: var(--base-color);
+  }
+
+
+
+
+  td {
+    border-bottom: 3px dotted var(--accent-color);
+    padding: 8px;
+  }
+
+  td+td {
+    text-align: right;
+  }
+}
+
+.preparation ul {
+  margin: 8px 0 0 16px;
+}
+
+.preparation li+li {
+  margin-top: 8px;
+}
+
+
+
+
+.steps ol {
+  margin-top: 8px;
+  counter-reset: step 0;
+  list-style: none;
+}
+
+.steps li {
+  counter-increment: step;
+  position: relative;
+  padding: 2px 0 0 48px;
+
+}
+
+.steps li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid var(--accent-color);
+  ;
+  color: var(--accent-color);
+}
+
+.steps li+li {
+  margin-top: 16px;
+}
+
